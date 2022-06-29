@@ -15,13 +15,6 @@ public:
             ++frequency[inputString[i] - 'a'];
         }
 
-        priority_queue<int> maxHeap;
-        for (int i = 0; i < ALPHABET_SIZE; ++i) {
-            if (frequency[i] > 0) {
-                maxHeap.push(frequency[i]);
-            }
-        }
-
         sort(frequency.begin(), frequency.end());
         int maxFrequency = inputString.length();
         int countDeletions = 0;
